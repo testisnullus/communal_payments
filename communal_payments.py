@@ -1,7 +1,7 @@
 import pandas as pd
 
 n = int(input("Введите номер месяца: "))
-month = ["0", "Январе", "Феврале", "Марте", "Апреле", "Мае", "Июне", "Июле", "Августе", "Сентябре", "Октябре", "Ноябре", "Декабре"]
+month = ["0", "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
 for i in range(len(month)):
     mon = month[n]
 
@@ -31,10 +31,10 @@ garbage_tarif = 51.24
 amount = round(electricity(present_testimony, past_testimony) + water(present_water_testimony, past_water_testimony) + garbage_tarif, 2)
 
 print()
-print(f"В {mon} нужно заплатить за электричество:", electricity(present_testimony, past_testimony), "гривны. \n")
-print(f"В {mon} нужно заплатить за воду:", water(present_water_testimony, past_water_testimony), "гривны. \n")
-print(f"В {mon} нужно заплатить за мусор : {garbage_tarif} гривны. \n")
-print(f"Всего нужно заплатить в {mon}: {amount} гривны. \n")
+print(f"В {mon} месяце нужно заплатить за электричество:", electricity(present_testimony, past_testimony), "гривны. \n")
+print(f"В {mon} месяце нужно заплатить за воду:", water(present_water_testimony, past_water_testimony), "гривны. \n")
+print(f"В {mon} месяце нужно заплатить за мусор : {garbage_tarif} гривны. \n")
+print(f"Всего нужно заплатить в {mon} месяце: {amount} гривны. \n")
 
 df = pd.DataFrame({'Месяц': [mon],
                    'Показания э/э счетчика': [present_testimony],
